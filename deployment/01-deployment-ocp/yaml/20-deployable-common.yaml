@@ -9,8 +9,8 @@ metadata:
 type: Opaque
 data:
   ##### User and FinancialPlan services
-  apiUrlUser: http://wealthcare-user-wealthcare-ns.api.aws-sub1.sandbox1073.opentlc.com/
-  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.api.aws-sub1.sandbox1073.opentlc.com/
+  apiUrlUser: http://wealthcare-user-wealthcare-ns.api.dev-cluster.sandbox2880.opentlc.com/
+  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.api.dev-cluster.sandbox2880.opentlc.com/
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
   configMapMqQueueManager: qmgr
