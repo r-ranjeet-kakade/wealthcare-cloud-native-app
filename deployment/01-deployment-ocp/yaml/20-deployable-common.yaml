@@ -20,17 +20,17 @@ data:
   configMapMqQueueNameWealthManager: DEV.QUEUE.3
   configMapMqDeadQueueName: DEV.DEAD.LETTER.QUEUE
   ##### DB-H2
-  databaseUrl: jdbc:h2:mem:/wcare
-  databaseUsername: admin
-  databasePassword: admin
-  databaseDriverClass: org.h2.Driver
-  databasePlatform: org.hibernate.dialect.H2Dialect
-  ##### DB-MySQL
-  # databaseUrl: jdbc:mysql://mysql/weatlhcaredb
+  # databaseUrl: jdbc:h2:mem:/wcare
   # databaseUsername: admin
   # databasePassword: admin
-  # databaseDriverClass: com.mysql.jdbc.Driver
-  # databasePlatform: org.hibernate.dialect.MySQL5Dialect
+  # databaseDriverClass: org.h2.Driver
+  # databasePlatform: org.hibernate.dialect.H2Dialect
+  ##### DB-MySQL
+  databaseUrl: jdbc:mysql://mysql/weatlhcaredb
+  databaseUsername: admin
+  databasePassword: admin
+  databaseDriverClass: com.mysql.jdbc.Driver
+  databasePlatform: org.hibernate.dialect.MySQL5Dialect
   ##### DB-DB2
   # databaseUrl: jdbc:db2://111.222.33.444:31463/wcare
   # databaseUsername: usr
