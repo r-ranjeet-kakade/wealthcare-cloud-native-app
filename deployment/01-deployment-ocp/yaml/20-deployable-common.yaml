@@ -9,8 +9,8 @@ metadata:
 type: Opaque
 data:
   ##### User and FinancialPlan services
-  apiUrlUser: http://wealthcare-user-wealthcare-ns.api.cluster-fjhhz.fjhhz.sandbox2446.opentlc.com:6443
-  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.api.cluster-fjhhz.fjhhz.sandbox2446.opentlc.com:6443
+  apiUrlUser: http://wealthcare-user-wealthcare-ns.console-openshift-console.apps.cluster-fjhhz.fjhhz.sandbox2446.opentlc.com/
+  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.console-openshift-console.apps.cluster-fjhhz.fjhhz.sandbox2446.opentlc.com
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
   configMapMqQueueManager: qmgr
@@ -26,9 +26,9 @@ data:
   databaseDriverClass: org.h2.Driver
   databasePlatform: org.hibernate.dialect.H2Dialect
   ##### DB-MySQL
-  # databaseUrl: jdbc:mysql://222.222.333.333:3306/wcare
-  # databaseUsername: usr
-  # databasePassword: pwddd
+  # databaseUrl: jdbc:mysql://mysql/weatlhcaredb
+  # databaseUsername: admin
+  # databasePassword: admin
   # databaseDriverClass: com.mysql.jdbc.Driver
   # databasePlatform: org.hibernate.dialect.MySQL5Dialect
   ##### DB-DB2
