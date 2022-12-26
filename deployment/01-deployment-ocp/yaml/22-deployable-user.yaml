@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-user
-          image: "gandhicloudlab/wealthcare-user-ocp-oss:0.0.1"
+          image: "image-registry.openshift-image-registry.svc:5000/wealthcare-ns/wealthcare-user-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: my-http
