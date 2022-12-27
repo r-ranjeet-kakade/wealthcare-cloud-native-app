@@ -9,8 +9,8 @@ metadata:
 type: Opaque
 data:
   ##### User and FinancialPlan services
-  apiUrlUser: http://wealthcare-user-wealthcare-ns.console-openshift-console.apps.cluster-h92sn.h92sn.sandbox1765.opentlc.com/
-  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.console-openshift-console.apps.cluster-h92sn.h92sn.sandbox1765.opentlc.com/
+  apiUrlUser: http://wealthcare-user-wealthcare-ns.turbo-ocp-india-2210d58450b96f76a8d17691176fef08-0000.us-south.containers.appdomain.cloud/
+  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.turbo-ocp-india-2210d58450b96f76a8d17691176fef08-0000.us-south.containers.appdomain.cloud/
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
   configMapMqQueueManager: qmgr
