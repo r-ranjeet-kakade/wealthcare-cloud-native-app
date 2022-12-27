@@ -7,8 +7,9 @@ folderPath=$(cd ${cdir}; pwd -P)
 cd "$folderPath"
 cd ../../../
 rootPATH="$(pwd)"
-echo "RootPath value is ............> $rootPATH"
-
+echo "========================================================================="
+echo "RootPath value is -----> $rootPATH"
+echo "========================================================================="
 # docker login -u gandhicloudlab
 
 # Docker Image related variables
@@ -18,19 +19,35 @@ export REGISTRY_USER=$(oc whoami)
 export NAMESPACE=wealthcare-ns
 export OPENSHIFT_REGISTRY_NAME=$(oc get route -n openshift-image-registry | awk '{print $2}' | awk 'NR==2')
 
+echo "========================================================================="
 # Login into OpenShift Image Registry
 docker login -u $(oc whoami) -p $(oc whoami -t) ${OPENSHIFT_REGISTRY_NAME}
+echo "DockerHub LOGIN SUCCESSFUL!!!"
+echo "========================================================================="
 
-# cd $rootPATH/wealthweb/config
-# sh 02-build-dockerhub.sh
+echo "========================================================================="
+cd $rootPATH/wealthweb/config
+sh 02-build-dockerhub.sh
+echo "Wealth Web Build COMPLETED"
+echo "========================================================================="
 
+echo "========================================================================="
 cd $rootPATH/wealthusers/config
 sh 02-build-dockerhub.sh
+echo "Wealth Users Build COMPLETED"
+echo "========================================================================="
 
-# cd $rootPATH/wealthnotification/config
-# sh 02-build-dockerhub.sh
+echo "========================================================================="
+cd $rootPATH/wealthnotification/config
+sh 02-build-dockerhub.sh
+echo "Wealth Notification Build COMPLETED"
+echo "========================================================================="
 
+echo "========================================================================="
 cd $rootPATH/wealthfinancialplan/config
 sh 02-build-dockerhub.sh
-
-echo "build dockerhub completed ...."
+echo "Wealth Financial Plan Build COMPLETED"
+echo "========================================================================="
+echo "DockerHub Build COMPLETED"
+echo "========================================================================="
+echo "========================================================================="
