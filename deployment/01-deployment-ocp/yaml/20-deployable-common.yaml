@@ -27,8 +27,8 @@ data:
   # databasePlatform: org.hibernate.dialect.H2Dialect
   ##### DB-MySQL
   databaseUrl: jdbc:mysql://mysql/wealthcare
-  databaseUsername: root
-  databasePassword: root
+  databaseUsername: admin
+  databasePassword: admin
   databaseDriverClass: com.mysql.jdbc.Driver
   databasePlatform: org.hibernate.dialect.MySQL5Dialect
   ##### DB-DB2
