@@ -14,7 +14,12 @@ echo "RootPath value is ............> $rootPATH"
 # Docker Image related variables
 # Example : docker.io/gandhicloudlab/welathcare-web-ocp-oss:0.0.1
 export IMAGE_SUFFIX=ocp-oss:0.0.1
-export REGISTRY_USER=gandhicloudlab
+export REGISTRY_USER=$(oc whoami)
+export NAMESPACE=wealthcare-ns
+export OPENSHIFT_REGISTRY_NAME=$(oc get route -n openshift-image-registry | awk '{print $2}' | awk 'NR==2')
+
+# Login into OpenShift Image Registry
+docker login -u $(oc whoami) -p $(oc whoami -t) ${OPENSHIFT_REGISTRY_NAME}
 
 # cd $rootPATH/wealthweb/config
 # sh 02-build-dockerhub.sh
