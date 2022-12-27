@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-notification
-          image: "gandhicloudlab/wealthcare-notification-ocp-oss:0.0.1"
+          image: "/wealthcare-ns/wealthcare-notification-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: my-http
