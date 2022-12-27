@@ -14,7 +14,12 @@ fi
 SERVICE_NAME=wealthcare-notification
 
 cp ../target/*.jar app.jar
-docker build -f Dockerfile -t docker.io/${REGISTRY_USER}/${SERVICE_NAME}-${IMAGE_SUFFIX} .
-docker push docker.io/${REGISTRY_USER}/${SERVICE_NAME}-${IMAGE_SUFFIX}
+#docker build -f Dockerfile -t docker.io/${REGISTRY_USER}/${SERVICE_NAME}-${IMAGE_SUFFIX} .
+#docker push docker.io/${REGISTRY_USER}/${SERVICE_NAME}-${IMAGE_SUFFIX}
+
+docker build -f Dockerfile -t docker.io/${SERVICE_NAME}-${IMAGE_SUFFIX} .
+docker tag docker.io/${SERVICE_NAME}-${IMAGE_SUFFIX} ${OPENSHIFT_REGISTRY_NAME}/${NAMESPACE}/${SERVICE_NAME}-${IMAGE_SUFFIX}
+docker push ${OPENSHIFT_REGISTRY_NAME}/${NAMESPACE}/${SERVICE_NAME}-${IMAGE_SUFFIX}
+
 
 echo "docker build completed ...."
