@@ -9,7 +9,6 @@ folderPath=$(cd ${cdir}; pwd -P)
 cd "$folderPath"
 cd ../../../
 rootPATH="$(pwd)"
-echo "--------------------------------------------------------------------------"
 echo "Root Path value is -----> $rootPATH"
 echo "--------------------------------------------------------------------------"
 # docker login -u gandhicloudlab
