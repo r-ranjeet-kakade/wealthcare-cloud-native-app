@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: container-financialplan
-          image: "gandhicloudlab/wealthcare-financialplan-ocp-oss:0.0.1"
+          image: "/wealthcare-ns/wealthcare-financialplan-ocp-oss:0.0.1"
           imagePullPolicy: Always
           ports:
             - name: my-http
