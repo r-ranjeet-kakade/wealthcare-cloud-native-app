@@ -9,8 +9,8 @@ metadata:
 type: Opaque
 data:
   ##### User and FinancialPlan services
-  apiUrlUser: http://wealthcare-user-wealthcare-ns.turbo-ocp-india-2210d58450b96f76a8d17691176fef08-0000.us-south.containers.appdomain.cloud/
-  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.turbo-ocp-india-2210d58450b96f76a8d17691176fef08-0000.us-south.containers.appdomain.cloud/
+  apiUrlUser: http://wealthcare-user-wealthcare-ns.apps.cluster-k6xmm.k6xmm.sandbox2868.opentlc.com/
+  apiUrlFinancialplan: http://wealthcare-financialplan-wealthcare-ns.apps.cluster-k6xmm.k6xmm.sandbox2868.opentlc.com/
   ##### MQ
   configMapMqConnName: 111.222.333.444(1414)
   configMapMqQueueManager: qmgr
@@ -26,7 +26,7 @@ data:
   # databaseDriverClass: org.h2.Driver
   # databasePlatform: org.hibernate.dialect.H2Dialect
   ##### DB-MySQL
-  databaseUrl: jdbc:mysql://mysql/wealthcare
+  databaseUrl: jdbc:mysql://:3306/wealthcare
   databaseUsername: root
   databasePassword: root
   databaseDriverClass: com.mysql.jdbc.Driver
